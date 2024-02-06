@@ -3,7 +3,7 @@ const express = require('express');
 const { run } = require('./pdf/PdfComponent');
 const cors = require('cors');
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3000
 app.use(cors());
 app.use(express.json());
 app.get("/", async(req, res) =>{
@@ -28,7 +28,7 @@ app.post('/gerarPdf', async (req, res) => {
     })
 });
 
-// Inicie o servidor
-app.listen(port, () => {
-  console.log(`Servidor Express rodando em http://localhost:${port}`);
+app.listen(port, () =>{
+    console.info(`Aplicação rodando na porta ${port}!`)
 });
+console.log("Servidor escutando na porta "+ port +"...")
