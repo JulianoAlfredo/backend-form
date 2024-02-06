@@ -43,22 +43,24 @@ async function fillPDF(templateBytes, textCoordinates, fontBytes, fontLatoBytes)
 module.exports = {
   async run(nome, data, email) {
     try {
-      const templateBytes =  await fs.readFile('./pdf/pdfs/primeiro.pdf');
-      const fontBytes =  await fs.readFile('./pdf/pdfs/LibreBaskerville-Regular.ttf');
-      const fontLatoBytes =  await readFile('./pdf/pdfs/Lato-Regular.ttf');
+      const templateBytes = await fs.readFile('./pdf/pdfs/primeiro.pdf');
+      const fontBytes = await fs.readFile('./pdf/pdfs/LibreBaskerville-Regular.ttf');
+      const fontLatoBytes = await fs.readFile('./pdf/pdfs/Lato-Regular.ttf');
 
-      const outputBytes =  fillPDF(templateBytes, {
+      const outputBytes = await fillPDF(templateBytes, {
         nome: { value: nome, x: 425, y: 380 },
-        data: { value: data, x: 440, y: 250, fontName: 'Lato' }, 
+        data: { value: data, x: 440, y: 250, fontName: 'Lato' }, // Adicione a fonte desejada
       }, fontBytes, fontLatoBytes);
 
-      
+      await fs.writeFile('output.pdf', outputBytes);
 
+      // Envie o e-mail com o PDF anexado
+      // Comente a linha abaixo se estiver testando sem realmente enviar o e-mail
       enviarEmail(nome, data, email, outputBytes);
 
-     return true
+      console.log('PDF gerado com sucesso!');
     } catch (error) {
-      return false
+      console.error('Erro ao gerar PDF:', error);
     }
   }
 };
