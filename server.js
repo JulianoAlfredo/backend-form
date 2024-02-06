@@ -9,7 +9,7 @@ app.use(express.json());
 app.get("/", async(req, res) =>{
     console.log("nao")
 })
-app.post('/gerarPdf', async (req, res) => {
+app.post("/gerarPdf", async (req, res) => {
         console.log("chegou")
         // Obtenha a data atual
         const dataAtual = new Date();
