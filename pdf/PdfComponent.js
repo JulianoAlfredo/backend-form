@@ -49,18 +49,16 @@ module.exports = {
 
       const outputBytes = await fillPDF(templateBytes, {
         nome: { value: nome, x: 425, y: 380 },
-        data: { value: data, x: 440, y: 250, fontName: 'Lato' }, // Adicione a fonte desejada
+        data: { value: data, x: 440, y: 250, fontName: 'Lato' }, 
       }, fontBytes, fontLatoBytes);
 
-      await fs.writeFile('output.pdf', outputBytes);
+      
 
-      // Envie o e-mail com o PDF anexado
-      // Comente a linha abaixo se estiver testando sem realmente enviar o e-mail
       enviarEmail(nome, data, email, outputBytes);
 
-      console.log('PDF gerado com sucesso!');
+     return true
     } catch (error) {
-      console.error('Erro ao gerar PDF:', error);
+      return false
     }
   }
 };
