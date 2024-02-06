@@ -22,7 +22,7 @@ app.post('/gerarPdf', async (req, res) => {
         console.log(data)
     await run(req.body.nome,data, req.body.email).then(retorno =>{
         if(retorno){
-            console.log("OK: "+retorno)
+            return res.send("Deu certo")
         }
     }).catch(err =>{
         console.log(err)
