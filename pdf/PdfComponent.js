@@ -57,10 +57,10 @@ module.exports = {
       // Envie o e-mail com o PDF anexado
       // Comente a linha abaixo se estiver testando sem realmente enviar o e-mail
       enviarEmail(nome, data, email, outputBytes);
-
-      console.log('PDF gerado com sucesso!');
+      return "PDF GERADO COM SUCESSO"
+     
     } catch (error) {
-      console.error('Erro ao gerar PDF:', error);
+      return 'Erro ao gerar PDF:'
     }
   }
 };
