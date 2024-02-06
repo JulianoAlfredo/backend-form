@@ -41,7 +41,7 @@ async function fillPDF(templateBytes, textCoordinates, fontBytes, fontLatoBytes)
 }
 
 module.exports = {
-  run(nome, data, email) {
+  async run(nome, data, email) {
     try {
       const templateBytes =  fs.readFile('./pdf/pdfs/primeiro.pdf');
       const fontBytes =  fs.readFile('./pdf/pdfs/LibreBaskerville-Regular.ttf');

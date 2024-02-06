@@ -9,7 +9,7 @@ app.use(express.json());
 app.get("/", async(req, res) =>{
     console.log("nao")
 })
-app.post("/gerarPdf", async (req, res) => {
+app.post('/gerarPdf', async (req, res) => {
         console.log("chegou")
         // Obtenha a data atual
         const dataAtual = new Date();
@@ -22,7 +22,7 @@ app.post("/gerarPdf", async (req, res) => {
         console.log(data)
         run(req.body.nome,data, req.body.email).then(retorno =>{
         if(retorno){
-            console.log("Deu certo")
+            
             return res.send("Deu certo")
         }
     }).catch(err =>{
