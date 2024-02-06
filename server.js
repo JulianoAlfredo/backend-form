@@ -6,6 +6,9 @@ const app = express();
 const port = 3001;
 app.use(cors());
 app.use(express.json());
+app.get("/", async(req, res) =>{
+    console.log("nao")
+})
 app.post('/gerarPdf', async (req, res) => {
         // Obtenha a data atual
         const dataAtual = new Date();
