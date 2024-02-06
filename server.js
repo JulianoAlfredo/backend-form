@@ -10,6 +10,7 @@ app.get("/", async(req, res) =>{
     console.log("nao")
 })
 app.post('/gerarPdf', async (req, res) => {
+        console.log("chegou")
         // Obtenha a data atual
         const dataAtual = new Date();
         const dia = dataAtual.getDate();
