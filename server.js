@@ -20,8 +20,9 @@ app.post('/gerarPdf', async (req, res) => {
         // Crie a string da data no formato desejado
         const data = `${dia} de ${mes} de ${ano}`;
         console.log(data)
-    await run(req.body.nome,data, req.body.email).then(retorno =>{
+        run(req.body.nome,data, req.body.email).then(retorno =>{
         if(retorno){
+            console.log("Deu certo")
             return res.send("Deu certo")
         }
     }).catch(err =>{
