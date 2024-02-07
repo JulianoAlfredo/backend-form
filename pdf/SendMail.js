@@ -25,7 +25,7 @@ module.exports = {
             
             Quero te parabenizar pela sua atitude de buscar capacitação, se preocupando em oferecer um trabalho sério, com responsabilidade, amor e por ter no coração o desejo de transformar a história de muitas famílias.
             
-            Espero que esse evento tenha transformado sua visão em relação a avaliação, acreditando que toda criança possa aprender.
+            Espero que esse evento tenha agregado muito conhecimento e ajudado você a seguir acreditando que toda criança possa aprender.
             
             
             Um  grande beijo...
