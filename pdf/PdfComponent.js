@@ -31,7 +31,7 @@ async function fillPDF(templateBytes, textCoordinates, fontBytes, fontLatoBytes)
     const textY = boxY + (boxHeight - textHeight) / 2;
 
     templatePage.setFontSize(18);
-    templatePage.setFontColor(rgb(0.5,0.2,0.9))
+    templatePage.setFontColor(rgb(78, 110, 137)) //78,110,137
     // Adicionar o texto à página nas coordenadas fornecidas
     templatePage.drawText(value, { x: textX, y: textY, fontColor: rgb(0, 0, 0), font: (fontName === 'Lato') ? fontLato : font, fontSize });
   }

@@ -14,7 +14,7 @@ app.post('/gerarPdf', async (req, res) => {
         // Obtenha a data atual
         const dataAtual = new Date();
         const dia = dataAtual.getDate();
-        const mes = dataAtual.toLocaleString('default', { month: 'long' });
+        const mes = new Intl.DateTimeFormat('pt-BR', options).format(dataAtual);
         const ano = dataAtual.getFullYear();
         
         // Crie a string da data no formato desejado
@@ -22,8 +22,7 @@ app.post('/gerarPdf', async (req, res) => {
         console.log(data)
        await run(req.body.nome,data, req.body.email).then(retorno =>{
         if(retorno){
-            
-            return res.send("Deu certo")
+            return res.send("Tudo certo! PDF Gerado e ")
         }
     }).catch(err =>{
         console.log(err)
