@@ -16,13 +16,26 @@ module.exports = {
           });
          
           var mailOptions = {
-            from: 'Certifica de conclusão! <alfredojuliano619@gmail.com>',
+            from: 'Instituto Aline Mediato <alfredojuliano619@gmail.com>',
             to: email,
-            subject: 'certificado emitido com sucesso ✅',
-            text: `Seu certificado foi emitido com sucesso, em anexo está o arquivo para download`,
+            subject: 'Certificado - Maratona Viver da Educação',
+            text: `Olá,
+
+            É com muita satisfação que venho te certificar pela sua participação na Maratona Viver da Educação!
+            
+            Quero te parabenizar pela sua atitude de buscar capacitação, se preocupando em oferecer um trabalho sério, com responsabilidade, amor e por ter no coração o desejo de transformar a história de muitas famílias.
+            
+            Espero que esse evento tenha transformado sua visão em relação a avaliação, acreditando que toda criança possa aprender.
+            
+            
+            Um  grande beijo...
+            
+             
+            
+            Att: Aline Mediato`,
             attachments: [
               {
-                filename: 'certificadoConclusao.pdf',
+                filename: nome+' certificado.pdf',
                 content: outputBytes,
                 encoding: 'base64',
               },
