@@ -15,9 +15,9 @@ app.post('/gerarPdf', async (req, res) => {
         const dataAtual = new Date();
         const options = { month: 'long' };
         const formatoData = { timeZone: 'America/Sao_Paulo' };
-        const dia = dataAtual.toLocaleString('pt-BR', formatoData);
+        const dia = dataAtual.getDate(); // Obtenha o dia diretamente
         const mes = new Intl.DateTimeFormat('pt-BR', options).format(dataAtual);
-        const ano = dataAtual.getFullYear
+        const ano = dataAtual.getFullYear();
         
         // Crie a string da data no formato desejado
         const data = `${dia} de ${mes} de ${ano}`;

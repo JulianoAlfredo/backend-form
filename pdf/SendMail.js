@@ -4,16 +4,16 @@ var nodemailer = require('nodemailer');
 
 
 module.exports = {
-    enviarEmail(nome, data, email, outputBytes){
-        var transporter = nodemailer.createTransport({
-            service: 'gmail',
-            port: 587,
-            secure: false,
-            auth: {
-              user: 'alfredojuliano619@gmail.com',
-              pass: 'rftyokswzsjlqibi'
-            }
-          });
+  enviarEmail(nome, data, email, outputBytes){
+      var transporter = nodemailer.createTransport({
+          service: 'gmail',
+          port: 587,
+          secure: false,
+          auth: {
+            user: 'alinemediato.certificado@gmail.com',
+            pass: 'ppilvzcrzqtfskou'
+          }
+        });
          
           var mailOptions = {
             from: 'Instituto Aline Mediato <alfredojuliano619@gmail.com>',
