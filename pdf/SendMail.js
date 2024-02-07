@@ -10,13 +10,13 @@ module.exports = {
             port: 587,
             secure: false,
             auth: {
-              user: 'alfredojuliano619@gmail.com',
-              pass: 'rftyokswzsjlqibi'
+              user: 'alinemediato.certificado@gmail.com',
+              pass: 'ppilvzcrzqtfskou'
             }
           });
          
           var mailOptions = {
-            from: 'Instituto Aline Mediato <alfredojuliano619@gmail.com>',
+            from: 'Instituto Aline Mediato <alinemediato.certificado@gmail.com>',
             to: email,
             subject: 'Certificado - Maratona Viver da Educação',
             text: `Olá,
