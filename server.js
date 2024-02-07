@@ -13,6 +13,7 @@ app.post('/gerarPdf', async (req, res) => {
         console.log("chegou")
         // Obtenha a data atual
         const dataAtual = new Date();
+        const options = { month: 'long' };
         const dia = dataAtual.getDate();
         const mes = new Intl.DateTimeFormat('pt-BR', options).format(dataAtual);
         const ano = dataAtual.getFullYear();
