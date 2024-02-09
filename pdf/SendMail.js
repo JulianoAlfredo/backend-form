@@ -6,7 +6,7 @@ var nodemailer = require('nodemailer');
 module.exports = {
   enviarEmail(nome, data, email, outputBytes){
       var transporter = nodemailer.createTransport({
-          service: 'br16.hostgator.com',
+          name: 'hostgator',
           host: 'br16.hostgator.com',
           port: 587,
           secure: false,
