@@ -8,7 +8,7 @@ module.exports = {
       var transporter = nodemailer.createTransport({
           name: 'hostgator',
           service: 'mail.pedagogiapratica.com.br',
-          host: 'br16.hostgator.com',
+          host: 'br16.hostgator.com.br',
           port: 587,
           secure: false,
           auth: {
