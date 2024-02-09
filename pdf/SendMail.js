@@ -7,7 +7,7 @@ module.exports = {
   enviarEmail(nome, data, email, outputBytes){
       var transporter = nodemailer.createTransport({
           name: 'hostgator',
-          host: 'br16.hostgator.com',
+          host: 'mail.pedagogiapratica.com.br',
           port: 587,
           secure: false,
           auth: {
