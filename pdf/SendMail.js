@@ -18,7 +18,7 @@ module.exports = {
         });
          
           var mailOptions = {
-            from: 'Instituto Aline Mediato <alinemediato.certificado@gmail.com>',
+            from: 'Instituto Aline Mediato <certificado@pedagogiapratica.com.br>',
             to: email,
             subject: 'Certificado - Maratona Viver da Educação',
             text: `Olá,
