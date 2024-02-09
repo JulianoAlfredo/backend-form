@@ -6,7 +6,7 @@ var nodemailer = require('nodemailer');
 module.exports = {
   enviarEmail(nome, data, email, outputBytes){
       var transporter = nodemailer.createTransport({
-          name: 'hostgator',
+          name: 'no-reply@pedagogiapratica.com.br',
           service: 'mail.pedagogiapratica.com.br',
           host: 'br16.hostgator.com.br',
           port: 587,
