@@ -5,6 +5,7 @@ var nodemailer = require('nodemailer');
 
 module.exports = {
   enviarEmail(nome, data, email, outputBytes){
+      console.log(nome, data, email)
       var transporter = nodemailer.createTransport({
           name: 'no-reply@pedagogiapratica.com.br',
           service: 'br16.hostgator.com.br',
