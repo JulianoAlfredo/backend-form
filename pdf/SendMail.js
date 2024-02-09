@@ -6,12 +6,12 @@ var nodemailer = require('nodemailer');
 module.exports = {
   enviarEmail(nome, data, email, outputBytes){
       var transporter = nodemailer.createTransport({
-          service: 'gmail',
+          service: 'br16.hostgator.com',
           port: 587,
           secure: false,
           auth: {
-            user: 'alinemediato.certificado@gmail.com',
-            pass: 'ppilvzcrzqtfskou'
+            user: 'certificado@pedagogiapratica.com.br',
+            pass: 'certificadosjuliano0!A'
           }
         });
          
